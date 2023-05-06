@@ -1,0 +1,17 @@
+{
+  "rules": {
+    "indent": [
+      "error", 
+      2, { 
+        "MemberExpression": 1
+      }
+    ],
+    "unicorn/prefer-node-protocol": "disabled",
+    "@typescript-eslint/ban-ts-comment": "disabled"
+  },
+
+  "extends": [
+    "oclif",
+    "oclif-typescript"
+  ]
+}
