@@ -130,6 +130,16 @@ export default class PgAdapter implements Adapter {
       default:
         throw new Error(`Unexpected migration attempt for status "${m.status}" on file: ${m.file}`)
     }
+
+    if( ['NEEDS_REPAIR', 'MIGRATE'].includes(operation) ){
+      try { 
+        await tx.query(m.sql)
+      }catch(err){
+        // TODO: make this typed
+        throw err
+      }
+    }
+
     const result = await tx.query(this.sql.insert, [
       m.prefix,
       m.version?.format(),
