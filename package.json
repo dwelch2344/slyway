@@ -32,7 +32,7 @@
     "oclif": "^3",
     "shx": "^0.3.3",
     "stdout-stderr": "^0.1.13",
-    "ts-jest": "^29.0.3",
+    "ts-jest": "^29.1.1",
     "ts-node": "^10.9.1",
     "tslib": "^2.3.1",
     "typescript": "^4.8.4"
